@@ -1,11 +1,9 @@
 
 package wordcounterapp;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
+
 
 /**
  *
@@ -14,19 +12,22 @@ import java.util.Scanner;
 public class WordCounterApp {
 
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
+        /*
         File songFile = new File("7Rings.txt");
         File stopwordsFile = new File("stopwords.txt");
         Scanner input = new Scanner(songFile);
         Scanner stopwordsInput = new Scanner(stopwordsFile);
         HashMap<String,Integer> wordCounter = new HashMap<>();
         HashSet<String> stopwords = new HashSet<>();
+        int count;
         
         //Inputting the Stopwords into the set
         while(stopwordsInput.hasNext()){
-            //clean and to lower case
+            //clean, remove punctuation and to lower case
             String stopword = stopwordsInput.next().toLowerCase();
             stopword = stopword.replaceAll("\\p{Punct}", "");
+            //input stopword to set
             if(stopwords.contains(stopword));
             else{
                 stopwords.add(stopword);
@@ -48,18 +49,19 @@ public class WordCounterApp {
                 wordCounter.put(next, wordCounter.get(next) + 1);
              }
         }
+        wordCounter = WordCounterApp.sortByValue(wordCounter);
         
-        wordCounter.keySet().forEach((word) -> {
-            int count = wordCounter.get(word);
-            System.out.println(count + " " + word);
-        });
-    }
-    
-    /*
-    Sort the Hashmap
-    */
-    public HashMap<String, Integer> sortMap(HashMap<String, Integer> song){
         
-        return song;
+        for (String word : wordCounter.keySet()) {
+            count = wordCounter.get(word);
+            System.out.println(count + ": " + word);
+        }
+        */
+        
+        String inputFile1 = "7Rings.txt";
+        String inputFile2 = "ThankUNext.txt";
+        Song SevenRings = new Song(inputFile1, "7 Rings");
+        //Song TUN = new Song(inputFile2, "Thank U, Next");
+        
     }
 }
