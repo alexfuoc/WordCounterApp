@@ -51,6 +51,9 @@ public class Album {
     Print the Lyrics to console
     */
     public void printLyrics(){
+        System.out.println("Album Title: " + albumName);
+        System.out.println("Number of songs: " + NumOfSongs);
+        System.out.println("Total Number of Words Sung: " + NumOfWords);
         for (String word : albumLyrics.keySet()) {
             int count = albumLyrics.get(word);
             System.out.println(count + ": " + word);
