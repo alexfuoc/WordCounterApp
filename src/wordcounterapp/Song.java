@@ -16,6 +16,7 @@ public class Song {
     HashMap<String,Integer> songLyrics = new HashMap<>();
     HashSet<String> stopwords = new HashSet<>();
     int count;
+    int totalWords = 0;
     String songTitle;
     
     public Song(String inputFile, String T)throws IOException{
@@ -50,14 +51,16 @@ public class Song {
             if(stopwords.contains(next)) {
             } else if(!songLyrics.containsKey(next)){
                 songLyrics.put(next, 1);
+                totalWords++;
             }else{
                 songLyrics.put(next, songLyrics.get(next) + 1);
+                totalWords++;
              }
         }
         //Sort the Hashmap
         songLyrics = Song.sortByValue(songLyrics);
-        printLyricsFile(songLyrics);
-        printLyrics(songLyrics);
+        //printLyricsFile(songLyrics);
+        //printLyrics(songLyrics);
     }
     
     /*
