@@ -8,7 +8,6 @@ import java.lang.*;
  Song Class
  */
 public class Song {
-
     File songFile;
     File outputFile;
     File stopwordsFile;
@@ -64,7 +63,7 @@ public class Song {
         //Sort the Hashmap
         songLyrics = Song.sortByValue(songLyrics);
         printLyricsFile(songLyrics);
-        //printLyrics(songLyrics);
+        printFrequencyFile(songLyrics);
     }
 
     /*
@@ -78,7 +77,7 @@ public class Song {
     }
 
     /*
-    Print the Lyrics to txt file
+    Print the Lyrics to txt file with all other songs
      */
     public void printLyricsFile(HashMap<String, Integer> song) throws IOException {
         //create a file first    
@@ -106,6 +105,20 @@ public class Song {
         }
     }
     
+    /*
+    Print the Lyrics to txt file
+     */
+    public void printFrequencyFile(HashMap<String, Integer> song){
+        try (PrintWriter output = new PrintWriter("frequencyFile.txt")) {
+            for (String word : song.keySet()) {
+                int count = song.get(word);
+                output.println(count + ": " + word);
+            }
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+    }   
+
     /*
      * Sort the Hashmap
      */
