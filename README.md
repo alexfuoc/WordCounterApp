@@ -54,13 +54,15 @@ public void printFrequencyFile(HashMap<String, Integer> song){
 }   
  ```
  
- *Example Output File, break up with your girlfriend, im bored*
+ *Example Output File, thank u, next*
 ```
-33: yeah
-31: girlfriend
-18: you
-10: know
-10: aint
+42: next
+38: you
+37: thank
+15: yeah
+8: my
+7: say
+6: taught
 ```
   ### Song Class
  
