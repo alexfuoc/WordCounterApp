@@ -1,5 +1,4 @@
 42: next
-38: you
 37: thank
 15: yeah
 8: my

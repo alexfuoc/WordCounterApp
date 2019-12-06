@@ -62,8 +62,8 @@ public class Song {
         }
         //Sort the Hashmap
         songLyrics = Song.sortByValue(songLyrics);
-        printLyricsFile(songLyrics);
-        printFrequencyFile(songLyrics);
+        //printLyricsFile(songLyrics);
+        //printFrequencyFile(songLyrics);
     }
 
     /*
@@ -108,8 +108,8 @@ public class Song {
     /*
     Print the Lyrics to txt file
      */
-    public void printFrequencyFile(HashMap<String, Integer> song){
-        try (PrintWriter output = new PrintWriter("frequencyFile.txt")) {
+    public void printFrequencyFile(HashMap<String, Integer> song, String outputFile){
+        try (PrintWriter output = new PrintWriter(outputFile)) {
             for (String word : song.keySet()) {
                 int count = song.get(word);
                 output.println(count + ": " + word);
@@ -143,8 +143,4 @@ public class Song {
       return temp;
     }
     
-    /*
-    getTitle method
-    @return - String songTitle
-    */
 }
