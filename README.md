@@ -1,3 +1,6 @@
+# Word Cloud Project
+Assignment 3 and 4 for CISC 3130- Data Structures. 
+
 ## Assignment 3 Objective- Word Frequencies [x](https://github.com/alexfuoc/WordCounterApp)
 Analyze a song for the frequency of word used by song utlizing different data structures.
   
