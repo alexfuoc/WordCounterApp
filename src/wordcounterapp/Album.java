@@ -67,9 +67,6 @@ public class Album {
     public void printLyricsFile(HashMap<String, Integer> album) throws IOException{
         //create a file first    
         PrintWriter output = new PrintWriter("albumOutput.txt");
-        output.println("Album Title: " + albumName);
-        output.println("Number of songs: " + NumOfSongs);
-        output.println("Total Number of Words Sung: " + NumOfWords);
         for (String word : album.keySet()) {
             int count = album.get(word);
             output.println(count + ": " + word);

@@ -51,9 +51,8 @@ public class WordCounterApp {
             TUN.addSong(tunSongs[i], i);
             tunSongs[i].printFrequencyFile(tunSongs[i].songLyrics, songFF[i]);
         }
-        //tunSongs[10].printFrequencyFile(tunSongs[10].songLyrics);
-        //TUN.printLyrics();
-        //TUN.printLyricsFile(TUN.albumLyrics);
+        
+        TUN.printLyricsFile(TUN.albumLyrics);
 
     }
 }
